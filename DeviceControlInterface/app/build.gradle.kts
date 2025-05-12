@@ -56,4 +56,38 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // ViewModel
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    // ViewModel utilities for Compose
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    // LiveData
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v290)
+    // Lifecycle utilities for Compose
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
+    // Saved state module for ViewModel
+    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
+
+//    // Annotation processor
+//    kapt(libs.androidx.lifecycle.compiler)
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation(libs.androidx.lifecycle.common.java8)
+
+    // optional - helpers for implementing LifecycleOwner in a Service
+    implementation(libs.androidx.lifecycle.service)
+
+    // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
+    implementation(libs.androidx.lifecycle.process)
+
+    // optional - ReactiveStreams support for LiveData
+    implementation(libs.androidx.lifecycle.reactivestreams.ktx)
+
+    // optional - Test helpers for LiveData
+    testImplementation(libs.androidx.core.testing)
+
+    // optional - Test helpers for Lifecycle runtime
+    testImplementation (libs.androidx.lifecycle.runtime.testing)
 }
